@@ -8,8 +8,8 @@ body {
   grid-gap: 5px;
   height: 100vh;
   /* grid-auto-flow: row: Automatico */
-  grid-auto-flow: column;
-  grid-auto-columns: 50px 100px;
+  /* grid-auto-flow: column;
+  grid-auto-columns: 50px 100px; */
   grid-auto-rows: 30px 50px;
 }
 .item {
