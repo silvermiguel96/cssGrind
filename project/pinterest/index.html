@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pinterest</title>
+  <style>
+    .container {
+      display:grid;
+      grid-template-columns: repeat(auto-fill, 250px);
+      grid-gap:5px;
+      justify-content: center;
+      grid-auto-flow: dense;
+    }
+    .item {
+      border-radius: 5px;
+      padding: 10px;
+      background: #f2f2f2;
+    }
+    .item img {
+       width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .level-1 {
+      grid-row-end: span 3;
+    }
+    .level-2 {
+      grid-row-end: span 2;
+    }
+    .leve-3 {
+      grid-row-end: span 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item level-1"><img src="../img/landing.jpg" alt="Landing"></div>
+    <div class="item level-2"><img src="../img/tshirt.jpg" alt="tshirt"></div>
+    <div class="item level-3"><img src="../img/house.jpg" alt="house"></div>
+    <div class="item level-1"><img src="../img/landing.jpg" alt="Landing"></div>
+    <div class="item level-2"><img src="../img/tshirt.jpg" alt="tshirt"></div>
+    <div class="item level-3"><img src="../img/house.jpg" alt="house"></div>
+    <div class="item level-1"><img src="../img/landing.jpg" alt="Landing"></div>
+    <div class="item level-2"><img src="../img/tshirt.jpg" alt="tshirt"></div>
+    <div class="item level-3"><img src="../img/house.jpg" alt="house"></div>    
+  </div>
+</body>
+</html>
