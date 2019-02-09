@@ -15,8 +15,27 @@
     background: #23475b;
     color: white;
     padding: 32px 15px;
+    display: grid;
+    grid-template-columns: minmax(auto, 1024px);
+    justify-content: center;
+  }
+  .hero-container {
+    display: grid;
+    grid-template-columns: 70px 1fr 320px;
+    grid-template-areas: "badge title       form"
+                         ".     description form"
+                         ".     conuntdown  form";
+    grid-gap: 10px;
+
+  }
+  .badge {
+    grid-area: badge;
+  }
+  .badge img {
+    max-width: 70px;
   }
   .title {
+    grid-area: title;
     font-size: 36;
     font-weight: normal;
     margin: 0;
@@ -24,6 +43,7 @@
     align-items: center;
   }
   .form {
+    grid-area: form;
     text-align: center;
     background: rgba(255, 255, 255, .9);
     padding: 1.5em;
@@ -53,10 +73,45 @@
     border-bottom: 5px solid #6d932b;
     display: inline-block;
   }
+  .countdown {
+    grid-area: conuntdown;
+  }
+  .countdown p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+  }
+  .countdown span {
+    font-size: 33px;
+  }
+  .description {
+    grid-area: description;
+  }
+  .countdown span:after {
+    content: ":";
+    display: inline-block;
+    margin: o 5px;  
+    }
+  .countdown span:last-child:after {
+    display: none;
+  }
+  p {
+    margin: 0;
+  }
+  @media screen and (max-width: 768px){
+    .hero-container {
+      grid-template-columns: 70px 1fr ;
+      grid-template-areas: "badge title    "
+                           "description  description "
+                           "form form      "
+                           "conuntdown  conuntdown  ";
+    }
+  }
   </style>
 </head>
 <body>
   <div class="hero">
+    <div class="hero-container">
     <div class="badge">
       <img src="../img/badge.png" alt="">
     </div>
@@ -82,6 +137,7 @@
         <span>09m</span>
         <span>05s</span>
       </p>
+    </div>
     </div>
   </div>
 </body>
